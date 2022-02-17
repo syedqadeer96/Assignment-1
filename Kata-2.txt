@@ -1,0 +1,174 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ echo h
+h
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ echo h >file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+diff --git a/file.txt b/file.txt
+index 87899fe..6e9f0da 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1,6 +1 @@
+-
+-
+-
+-Helo
+-hi syed.
+-How are you.
++h
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff --staged
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add .
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index 87899fe..6e9f0da 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1,6 +1 @@
+-
+-
+-
+-Helo
+-hi syed.
+-How are you.
++h
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ echo hello > file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+diff --git a/file.txt b/file.txt
+index 6e9f0da..ce01362 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-h
++hello
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add .
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index 87899fe..ce01362 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1,6 +1 @@
+-
+-
+-
+-Helo
+-hi syed.
+-How are you.
++hello
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git reset HEAD file.txt
+Unstaged changes after reset:
+M       file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ echo 3 >file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ get diff
+bash: get: command not found
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+diff --git a/file.txt b/file.txt
+index 87899fe..00750ed 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1,6 +1 @@
+-
+-
+-
+-Helo
+-hi syed.
+-How are you.
++3
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git diff --staged
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add .
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git restore --staged file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$

@@ -1,0 +1,324 @@
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log
+commit ceb1d419ceefa55246952e4546c3f98bbaf9fd20 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:08:33 2022 +0530
+
+    Secon c
+
+commit 0fb1cddeb1fbdf98365d6b1b167f4064bde45ca4
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:02:05 2022 +0530
+
+    First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add .
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ gti status
+bash: gti: command not found
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git branch
+* master
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git branch mybranch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git branch
+* master
+  mybranch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+M       file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git restore --staged file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ gti sattus
+bash: gti: command not found
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git add .
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+[mybranch 6b49c80] /c/Users/HP/OneDrive/Desktop/13-IntroJavascript.pptx
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git /c/Users/HP/OneDrive/Desktop/passbook_updated.pdf
+git: 'C:/Users/HP/OneDrive/Desktop/passbook_updated.pdf' is not a git command. See 'git --he
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git branch
+  master
+* mybranch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ mgit status
+bash: mgit: command not found
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git restore --staged file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git rm --cached file.txt
+rm 'file.txt'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git mybranch
+git: 'mybranch' is not a git command. See 'git --help'.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git branch
+  master
+* mybranch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ vi file1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git add file1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git log
+commit 6b49c808dfc8ffe9251a3ca9ee18589da2770fe9 (HEAD -> mybranch)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Wed Feb 16 09:47:37 2022 +0530
+
+    /c/Users/HP/OneDrive/Desktop/13-IntroJavascript.pptx
+
+commit ceb1d419ceefa55246952e4546c3f98bbaf9fd20 (master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:08:33 2022 +0530
+
+    Secon c
+
+commit 0fb1cddeb1fbdf98365d6b1b167f4064bde45ca4
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:02:05 2022 +0530
+
+    First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git log --oneline --graph
+* 6b49c80 (HEAD -> mybranch) /c/Users/HP/OneDrive/Desktop/13-IntroJavascript.pptx
+* ceb1d41 (master) Secon c
+* 0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git commit file1.txt
+Aborting commit due to empty commit message.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git commit -m "new com"
+[mybranch 481ac9e] new com
+ 2 files changed, 1 deletion(-)
+ delete mode 100644 file.txt
+ create mode 100644 file1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git log --oneline --graph
+* 481ac9e (HEAD -> mybranch) new com
+* 6b49c80 /c/Users/HP/OneDrive/Desktop/13-IntroJavascript.pptx
+* ceb1d41 (master) Secon c
+* 0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git switch master
+error: The following untracked working tree files would be overwritten by checkout:
+        file.txt
+Please move or remove them before you switch branches.
+Aborting
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git switch master
+error: Your local changes to the following files would be overwritten by checkout:
+        file.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git status
+On branch mybranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ vi file,txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git commit -m "file first 1"
+[mybranch 80c9419] file first 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git switch master
+Switched to branch 'master'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file,txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log --online --graph
+fatal: unrecognized argument: --online
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log --oneline --graph
+* ceb1d41 (HEAD -> master) Secon c
+* 0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add file3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git commit -m"file 3 commit"
+[master 3e1c927] file 3 commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log --oneline --graph
+* 3e1c927 (HEAD -> master) file 3 commit
+* ceb1d41 Secon c
+* 0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git branch
+* master
+  mybranch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$ git diff mybranch master
+diff --git a/file.txt b/file.txt
+index 00750ed..87899fe 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1,6 @@
+-3
++
++
++
++Helo
++hi syed.
++How are you.
+diff --git a/file1.txt b/file3.txt
+similarity index 100%
+rename from file1.txt
+rename to file3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (mybranch)
+$

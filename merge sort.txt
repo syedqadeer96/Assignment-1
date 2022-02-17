@@ -1,0 +1,154 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master|MERGING)
+$ vi commit3.c
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master|MERGING)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master|MERGING)
+$ git commit -m "Commit resolved"
+[master 6a81c42] Commit resolved
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+*   commit 6a81c42248e1000a094aee75b3b84fee1ebd7131 (HEAD -> master)
+|\  Merge: 12049dc 449f51f
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Thu Feb 17 10:12:10 2022 +0530
+| |
+| |     Commit resolved
+| |
+| * commit 449f51f36a277127f068f6cd12b6402e75002021 (conflict)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 22:14:20 2022 +0530
+| |
+| |     conflict3
+| |
+* | commit 12049dc0962e7e6df347087596e626519993a866
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 22:20:04 2022 +0530
+|
+|       conflict
+|
+*   commit 632c41a66e4a91b7c1a3da2048b56b45e6da2b48
+|\  Merge: 891e514 44c26a6
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 20:05:50 2022 +0530
+| |
+| |     Completed
+| |
+| * commit 44c26a6d882f3065082fcaabc640987c07b4ed4e (feature1)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 19:49:50 2022 +0530
+| |
+| |     feature done
+| |
+| * commit cad202138b924ce8b2e5023181dcd1197bdefb7e
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:07:05 2022 +0530
+| |
+| |     feature commit 2
+| |
+| * commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:04:20 2022 +0530
+| |
+| |     feature commit 1
+| |
+* | commit 891e514edd9cfba3fad1b07eb627478e273ba6f8
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|       bug fix
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+:
+*   commit 6a81c42248e1000a094aee75b3b84fee1ebd7131 (HEAD -> master)
+|\  Merge: 12049dc 449f51f
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Thu Feb 17 10:12:10 2022 +0530
+| |
+| |     Commit resolved
+| |
+| * commit 449f51f36a277127f068f6cd12b6402e75002021 (conflict)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 22:14:20 2022 +0530
+| |
+| |     conflict3
+| |
+* | commit 12049dc0962e7e6df347087596e626519993a866
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 22:20:04 2022 +0530
+|
+|       conflict
+|
+*   commit 632c41a66e4a91b7c1a3da2048b56b45e6da2b48
+|\  Merge: 891e514 44c26a6
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 20:05:50 2022 +0530
+:
+*   commit 6a81c42248e1000a094aee75b3b84fee1ebd7131 (HEAD -> master)
+|\  Merge: 12049dc 449f51f
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Thu Feb 17 10:12:10 2022 +0530
+| |
+| |     Commit resolved
+| |
+| * commit 449f51f36a277127f068f6cd12b6402e75002021 (conflict)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 22:14:20 2022 +0530
+| |
+| |     conflict3
+| |
+* | commit 12049dc0962e7e6df347087596e626519993a866
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 22:20:04 2022 +0530
+|
+|       conflict
+|
+*   commit 632c41a66e4a91b7c1a3da2048b56b45e6da2b48
+|\  Merge: 891e514 44c26a6
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 20:05:50 2022 +0530
+| |
+| |     Completed
+| |
+| * commit 44c26a6d882f3065082fcaabc640987c07b4ed4e (feature1)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 19:49:50 2022 +0530
+| |
+| |     feature done
+| |
+| * commit cad202138b924ce8b2e5023181dcd1197bdefb7e
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:07:05 2022 +0530
+| |
+| |     feature commit 2
+| |
+| * commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:04:20 2022 +0530
+| |
+| |     feature commit 1
+| |
+* | commit 891e514edd9cfba3fad1b07eb627478e273ba6f8
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|       bug fix
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$

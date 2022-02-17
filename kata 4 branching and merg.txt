@@ -1,0 +1,727 @@
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (main)
+$ git init
+Initialized empty Git repository in C:/Users/HP/OneDrive/Desktop/Branch/.git/
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ vi version1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   version1.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ vi version2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git commit -m "version1"
+[master (root-commit) c7d1099] version1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 version1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git commit -m "version2"
+[master 95c0d47] version2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 version2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ vi version3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git commit -m "version3"
+[master be260a5] version3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 version3.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --oneline --graph
+* be260a5 (HEAD -> master) version3
+* 95c0d47 version2
+* c7d1099 version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Wed Feb 16 16:46:10 2022 +0530
+
+    version3
+
+commit 95c0d47fe08df514cf281a41283926b27aaa4423
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Wed Feb 16 16:45:16 2022 +0530
+
+    version2
+
+commit c7d10999c1233e63fdfacebce38201e5c2278179
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Wed Feb 16 16:44:49 2022 +0530
+
+    version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git branch feature1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --oneline --graph
+* be260a5 (HEAD -> master, feature1) version3
+* 95c0d47 version2
+* c7d1099 version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master, feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git log --all --graph
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> feature1, master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ vi commit1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git commit -m "feature commit 1"
+[feature1 2200b30] feature commit 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git log --all --graph
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+      0 [sig] bash 1428! sigpacket::process: Suppressing signal 18 to win32 process (pid 13456)
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+ 970693 [sig] bash 1428! sigpacket::process: Suppressing signal 18 to win32 process (pid 13456)
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+2326797 [sig] bash 1428! sigpacket::process: Suppressing signal 18 to win32 process (pid 13456)
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ vi commit2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git commit -m "feature commit 2"
+[feature1 cad2021] feature commit 2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git log --all --graph
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git checkout feature1
+Already on 'feature1'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e (feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+:...skipping...
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e (feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e (feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+:
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e (feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2 (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ vi bug.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git commit -m "bug fix"
+[master 891e514] bug fix
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bug.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+* commit 891e514edd9cfba3fad1b07eb627478e273ba6f8 (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|     bug fix
+|
+| * commit cad202138b924ce8b2e5023181dcd1197bdefb7e (feature1)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:07:05 2022 +0530
+| |
+| |     feature commit 2
+| |
+| * commit 2200b30c0f6d87a86994a32615537029b5f5699d
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|       feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ ^C
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ get log --all --graph
+bash: get: command not found
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git log --all --graph
+* commit 891e514edd9cfba3fad1b07eb627478e273ba6f8 (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|     bug fix
+|
+| * commit cad202138b924ce8b2e5023181dcd1197bdefb7e (HEAD -> feature1)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:07:05 2022 +0530
+| |
+| |     feature commit 2
+| |
+| * commit 2200b30c0f6d87a86994a32615537029b5f5699d
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|       feature commit 1
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ vi commit3
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git commit -m "feature done"
+[feature1 44c26a6] feature done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit3
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git log --all --graph
+* commit 44c26a6d882f3065082fcaabc640987c07b4ed4e (HEAD -> feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 19:49:50 2022 +0530
+|
+|     feature done
+|
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+| * commit 891e514edd9cfba3fad1b07eb627478e273ba6f8 (master)
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|       bug fix
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+* commit 44c26a6d882f3065082fcaabc640987c07b4ed4e (feature1)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 19:49:50 2022 +0530
+|
+|     feature done
+|
+* commit cad202138b924ce8b2e5023181dcd1197bdefb7e
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:07:05 2022 +0530
+|
+|     feature commit 2
+|
+* commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 17:04:20 2022 +0530
+|
+|     feature commit 1
+|
+| * commit 891e514edd9cfba3fad1b07eb627478e273ba6f8 (HEAD -> master)
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|       bug fix
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git merge feature1 -m "Completed"
+Merge made by the 'ort' strategy.
+ commit1.txt | 0
+ commit2.txt | 0
+ commit3     | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit1.txt
+ create mode 100644 commit2.txt
+ create mode 100644 commit3
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --all --graph
+*   commit 632c41a66e4a91b7c1a3da2048b56b45e6da2b48 (HEAD -> master)
+|\  Merge: 891e514 44c26a6
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 20:05:50 2022 +0530
+| |
+| |     Completed
+| |
+| * commit 44c26a6d882f3065082fcaabc640987c07b4ed4e (feature1)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 19:49:50 2022 +0530
+| |
+| |     feature done
+| |
+| * commit cad202138b924ce8b2e5023181dcd1197bdefb7e
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:07:05 2022 +0530
+| |
+| |     feature commit 2
+| |
+| * commit 2200b30c0f6d87a86994a32615537029b5f5699d
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Wed Feb 16 17:04:20 2022 +0530
+| |
+| |     feature commit 1
+| |
+* | commit 891e514edd9cfba3fad1b07eb627478e273ba6f8
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Wed Feb 16 19:27:40 2022 +0530
+|
+|       bug fix
+|
+* commit be260a5faf762904753f9dd2294b5afd3bf98bf2
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:46:10 2022 +0530
+|
+|     version3
+|
+* commit 95c0d47fe08df514cf281a41283926b27aaa4423
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Wed Feb 16 16:45:16 2022 +0530
+|
+|     version2
+|
+* commit c7d10999c1233e63fdfacebce38201e5c2278179
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Wed Feb 16 16:44:49 2022 +0530
+
+      version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
