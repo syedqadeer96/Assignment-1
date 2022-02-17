@@ -1,0 +1,97 @@
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git rm file.txt
+error: the following file has changes staged in the index:
+    file.txt
+(use --cached to keep the file, or -f to force removal)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git commit -m "First commit"
+[master (root-commit) 0fb1cdd] First commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log
+commit 0fb1cddeb1fbdf98365d6b1b167f4064bde45ca4 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:02:05 2022 +0530
+
+    First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi file.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git commit -m "Secon c"
+[master ceb1d41] Secon c
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log
+commit ceb1d419ceefa55246952e4546c3f98bbaf9fd20 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:08:33 2022 +0530
+
+    Secon c
+
+commit 0fb1cddeb1fbdf98365d6b1b167f4064bde45ca4
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Tue Feb 15 22:02:05 2022 +0530
+
+    First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ ^C
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$
