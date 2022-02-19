@@ -1,0 +1,236 @@
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (main)
+$ git init
+Initialized empty Git repository in C:/Users/HP/OneDrive/Desktop/first_git_repo/.git/
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "First Commit"
+[master (root-commit) 41391a6] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git remote add origin https://github.com/syedqadeer96/zemoso-training.git
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.37 KiB | 702.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/syedqadeer96/zemoso-training.git
+ * [new branch]      master -> master
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "second commit"
+[master 8f37d3b] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rewrite hello_world.txt (83%)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git remote -v
+origin  https://github.com/syedqadeer96/zemoso-training.git (fetch)
+origin  https://github.com/syedqadeer96/zemoso-training.git (push)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 434 bytes | 434.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/syedqadeer96/zemoso-training.git
+   41391a6..8f37d3b  master -> master
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git diff
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git diff --staged
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git push origin master
+Everything up-to-date
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git checkout -b new_branch
+Switched to a new branch 'new_branch'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git status
+On branch new_branch
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git status
+On branch new_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git commit -m "third commit"
+[new_branch 3b15da1] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rewrite hello_world.txt (100%)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git push origin new_branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 140.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/syedqadeer96/zemoso-training/pull/new/new_branch
+remote:
+To https://github.com/syedqadeer96/zemoso-training.git
+ * [new branch]      new_branch -> new_branch
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$
+
+
+/////////////////////////////////
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/git_clone_repo (main)
+$ git clone https://github.com/syedqadeer96/zemoso-training.git
+Cloning into 'zemoso-training'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 2), reused 9 (delta 2), pack-reused 0
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (2/2), done.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/git_clone_repo (main)
+$
+////////////////////////////////////////////
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git log --all --graph
+* commit 3b15da16140207113be2455f7b88e9c829d2a671 (HEAD -> new_branch, origin/new_branch)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Thu Feb 17 20:07:35 2022 +0530
+|
+|     third commit
+|
+* commit 8f37d3b1c6a3e71eefe225ba8936e3db31d0023d (origin/master, master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Thu Feb 17 19:44:55 2022 +0530
+|
+|     second commit
+|
+* commit 41391a671a4418437c2ea7675cc7113f460dfc41
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Thu Feb 17 19:40:32 2022 +0530
+
+      First Commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 625 bytes | 22.00 KiB/s, done.
+From https://github.com/syedqadeer96/zemoso-training
+   8f37d3b..f179de9  master     -> origin/master
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git log --all --graph
+*   commit f179de96ed800781e6382566225b57f00d9951cf (origin/master)
+|\  Merge: 8f37d3b 3b15da1
+| | Author: syedqadeer96 <99789405+syedqadeer96@users.noreply.github.com>
+| | Date:   Thu Feb 17 20:11:38 2022 +0530
+| |
+| |     Merge pull request #1 from syedqadeer96/new_branch
+| |
+| |     third commit
+| |
+| * commit 3b15da16140207113be2455f7b88e9c829d2a671 (HEAD -> new_branch, origin/new_branch)
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Thu Feb 17 20:07:35 2022 +0530
+|
+|       third commit
+|
+* commit 8f37d3b1c6a3e71eefe225ba8936e3db31d0023d (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Thu Feb 17 19:44:55 2022 +0530
+|
+|     second commit
+|
+* commit 41391a671a4418437c2ea7675cc7113f460dfc41
+  Author: qadeer <syed.qadeer@zemosolabs.com>
+  Date:   Thu Feb 17 19:40:32 2022 +0530
+
+      First Commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git pull origin master
+From https://github.com/syedqadeer96/zemoso-training
+ * branch            master     -> FETCH_HEAD
+Updating 8f37d3b..f179de9
+Fast-forward
+ hello_world.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git log --all --graph
+*   commit f179de96ed800781e6382566225b57f00d9951cf (HEAD -> master, origin/master)
+|\  Merge: 8f37d3b 3b15da1
+| | Author: syedqadeer96 <99789405+syedqadeer96@users.noreply.github.com>
+| | Date:   Thu Feb 17 20:11:38 2022 +0530
+| |
+| |     Merge pull request #1 from syedqadeer96/new_branch
+| |
+| |     third commit
+| |
+| * commit 3b15da16140207113be2455f7b88e9c829d2a671 (origin/new_branch, new_branch)
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>

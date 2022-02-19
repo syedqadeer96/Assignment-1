@@ -1,0 +1,165 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   resetfile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git checkout -b nbranch
+Switched to a new branch 'nbranch'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ vi amendfile.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git add amendfile.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git commit  -m "amendfile.txt"
+[nbranch 7cca77a] amendfile.txt
+ 2 files changed, 1 insertion(+)
+ create mode 100644 amendfile.txt
+ create mode 100644 resetfile.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ vi stagingcommit.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git status
+On branch nbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.txt
+        stagingcommit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git stATUS
+fatal: cannot handle stATUS as a builtin
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git status
+On branch nbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   newfile.txt
+        new file:   stagingcommit.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git commit --amend --no-edit
+[nbranch 2f12cf9] amendfile.txt
+ Date: Sat Feb 19 11:08:05 2022 +0530
+ 4 files changed, 1 insertion(+)
+ create mode 100644 amendfile.txt
+ create mode 100644 newfile.txt
+ create mode 100644 resetfile.txt
+ create mode 100644 stagingcommit.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git status
+On branch nbranch
+nothing to commit, working tree clean
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git log --decorate --graph
+* commit 2f12cf95eca265aa8971d082bf762cb1eb4f4944 (HEAD -> nbranch)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Sat Feb 19 11:08:05 2022 +0530
+|
+|     amendfile.txt
+|
+* commit ad4de96e3da64da4076208008d837a94c2a5691a (master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:44:27 2022 +0530
+|
+|     Revert " 1"
+|
+|     This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+|
+* commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:43:43 2022 +0530
+|
+|      1
+|
+* commit 98039698688cb53ba432c935b62230e3f4d70e92
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:38:46 2022 +0530
+|
+|     Revert " 3"
+|
+|     This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+|
+* commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:36:52 2022 +0530
+|
+|      3
+|
+* commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:30:45 2022 +0530
+|
+|     Revert "revert commit 2"
+|
+|     This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+|
+* commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:30:14 2022 +0530
+|
+|     revert commit 2
+|
+* commit 6b16678bda27db75dba2107f647db02285ac6a2e
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 19:27:34 2022 +0530
+|
+|     Revert "revert commit"
+|
+|     This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+|
+* commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$ git log --oneline
+2f12cf9 (HEAD -> nbranch) amendfile.txt
+ad4de96 (master) Revert " 1"
+c0a8364  1
+9803969 Revert " 3"
+a4f7223  3
+a0698eb Revert "revert commit 2"
+06e4f73 revert commit 2
+6b16678 Revert "revert commit"
+dda4440 revert commit
+6a81c42 Commit resolved
+12049dc conflict
+449f51f (conflict) conflict3
+632c41a Completed
+44c26a6 (feature1) feature done
+891e514 bug fix
+cad2021 feature commit 2
+2200b30 feature commit 1
+be260a5 version3
+95c0d47 version2
+c7d1099 version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (nbranch)
+$

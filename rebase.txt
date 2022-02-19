@@ -1,0 +1,193 @@
+@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (my_cool_feature)
+$ git rebase master
+Current branch my_cool_feature is up to date.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (my_cool_feature)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ ls
+hello_world.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ vi rebasem.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "c1"
+[master 74efe0d] c1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 rebasem.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ vi commit.c
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git statsu
+git: 'statsu' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commit.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "c2"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commit.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+warning: LF will be replaced by CRLF in commit.c.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "c2"
+[master 5bab2fb] c2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 commit.c
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ vi rebasem.c
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        rebasem.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+warning: LF will be replaced by CRLF in rebasem.c.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "c3"
+[master fadfa8e] c3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 rebasem.c
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ vi rebasem.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   rebasem.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git add .
+warning: LF will be replaced by CRLF in rebasem.txt.
+The file will have its original line endings in your working directory
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git commit -m "m2"
+[master 430cad4] m2
+ 1 file changed, 1 insertion(+)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git log --all --grapgh
+fatal: unrecognized argument: --grapgh
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git log --all --graph
+* commit 430cad42deed16c2da14680ecbc5e18f29d400ae (HEAD -> master)
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 13:17:09 2022 +0530
+|
+|     m2
+|
+* commit fadfa8ed066bb97ee69e40dcda1e38f3095d359b
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 13:13:03 2022 +0530
+|
+|     c3
+|
+* commit 5bab2fb227be715ca59c6aedc0a07ce77825a112
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 13:10:50 2022 +0530
+|
+|     c2
+|
+* commit 74efe0dd9bb2fbde5fbea540099ae143000c6615
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Fri Feb 18 13:09:29 2022 +0530
+|
+|     c1
+|
+| * commit d295aa210bed16012d08b896f028ea92c23c1888 (my_cool_feature)
+| | Author: qadeer <syed.qadeer@zemosolabs.com>
+| | Date:   Fri Feb 18 13:01:16 2022 +0530
+| |
+| |     commited again
+| |
+| * commit 84b86fb14323f892504c1e154e384b10059cd022
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Fri Feb 18 12:49:39 2022 +0530
+|
+|       commit all
+|
+*   commit f179de96ed800781e6382566225b57f00d9951cf (origin/master)
+|\  Merge: 8f37d3b 3b15da1
+| | Author: syedqadeer96 <99789405+syedqadeer96@users.noreply.github.com>
+| | Date:   Thu Feb 17 20:11:38 2022 +0530
+| |
+| |     Merge pull request #1 from syedqadeer96/new_branch
+| |
+| |     third commit
+| |
+| * commit 3b15da16140207113be2455f7b88e9c829d2a671 (origin/new_branch, new_branch)
+|/  Author: qadeer <syed.qadeer@zemosolabs.com>
+|   Date:   Thu Feb 17 20:07:35 2022 +0530
+|
+|       third commit
+|
+* commit 8f37d3b1c6a3e71eefe225ba8936e3db31d0023d
+| Author: qadeer <syed.qadeer@zemosolabs.com>
+| Date:   Thu Feb 17 19:44:55 2022 +0530
+|
+|     second commit
+|
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git log --oneline --graph
+* 430cad4 (HEAD -> master) m2
+* fadfa8e c3
+* 5bab2fb c2
+* 74efe0d c1
+*   f179de9 (origin/master) Merge pull request #1 from syedqadeer96/new_branch
+|\
+| * 3b15da1 (origin/new_branch, new_branch) third commit
+|/
+* 8f37d3b second commit
+* 41391a6 First Commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (master)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/first_git_repo (new_branch)
+$ git rebase master
+Succ

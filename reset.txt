@@ -1,0 +1,557 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ vi resetfile.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resetfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit bcd02391031d02f15735855e43a261314079fa01 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 20:44:39 2022 +0530
+
+    new
+
+commit ad4de96e3da64da4076208008d837a94c2a5691a
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --hard
+HEAD is now at bcd0239 new
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
+//////////////////////////////////////
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset mixed
+fatal: ambiguous argument 'mixed': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --mixed
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset soft
+fatal: ambiguous argument 'soft': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit bcd02391031d02f15735855e43a261314079fa01 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 20:44:39 2022 +0530
+
+    new
+
+commit ad4de96e3da64da4076208008d837a94c2a5691a
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ ^C
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft ad4de96e3da64da4076208008d837a94c2a5691a
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit ad4de96e3da64da4076208008d837a94c2a5691a (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:26:40 2022 +0530
+
+    revert commit
+
+commit 6a81c42248e1000a094aee75b3b84fee1ebd7131
+:
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset mixed
+fatal: ambiguous argument 'mixed': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --mixed
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset soft
+fatal: ambiguous argument 'soft': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit bcd02391031d02f15735855e43a261314079fa01 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 20:44:39 2022 +0530
+
+    new
+
+commit ad4de96e3da64da4076208008d837a94c2a5691a
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ ^C
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft ad4de96e3da64da4076208008d837a94c2a5691a
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit ad4de96e3da64da4076208008d837a94c2a5691a (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:26:40 2022 +0530
+
+    revert commit
+
+commit 6a81c42248e1000a094aee75b3b84fee1ebd7131
+:
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset mixed
+fatal: ambiguous argument 'mixed': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --mixed
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset soft
+fatal: ambiguous argument 'soft': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit bcd02391031d02f15735855e43a261314079fa01 (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 20:44:39 2022 +0530
+
+    new
+
+commit ad4de96e3da64da4076208008d837a94c2a5691a
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ ^C
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git reset --soft ad4de96e3da64da4076208008d837a94c2a5691a
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log
+commit ad4de96e3da64da4076208008d837a94c2a5691a (HEAD -> master)
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:44:27 2022 +0530
+
+    Revert " 1"
+
+    This reverts commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6.
+
+commit c0a83649e2f6d50f386b5cb680b3cc3751b157f6
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:43:43 2022 +0530
+
+     1
+
+commit 98039698688cb53ba432c935b62230e3f4d70e92
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:38:46 2022 +0530
+
+    Revert " 3"
+
+    This reverts commit a4f7223eaf3f6b2225854985bcad489746e4b79b.
+
+commit a4f7223eaf3f6b2225854985bcad489746e4b79b
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:36:52 2022 +0530
+
+     3
+
+commit a0698ebfb57dedda5a2250b07beea32e3819e49c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:45 2022 +0530
+
+    Revert "revert commit 2"
+
+    This reverts commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c.
+
+commit 06e4f7307c3c4818b3b3f1d8c15f42afc08c4d3c
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:30:14 2022 +0530
+
+    revert commit 2
+
+commit 6b16678bda27db75dba2107f647db02285ac6a2e
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:27:34 2022 +0530
+
+    Revert "revert commit"
+
+    This reverts commit dda4440471af4ab83e635c1f34b562d18b5f49d1.
+
+commit dda4440471af4ab83e635c1f34b562d18b5f49d1
+Author: qadeer <syed.qadeer@zemosolabs.com>
+Date:   Fri Feb 18 19:26:40 2022 +0530
+
+    revert commit
+
+commit 6a81c42248e1000a094aee75b3b84fee1ebd7131
+:

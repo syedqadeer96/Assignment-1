@@ -1,0 +1,57 @@
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --oneline
+a26a6a4 (HEAD -> master) name after reword commiting
+ad4de96 Revert " 1"
+c0a8364  1
+9803969 Revert " 3"
+a4f7223  3
+a0698eb Revert "revert commit 2"
+06e4f73 revert commit 2
+6b16678 Revert "revert commit"
+dda4440 revert commit
+6a81c42 Commit resolved
+12049dc conflict
+449f51f (conflict) conflict3
+632c41a Completed
+44c26a6 (feature1) feature done
+891e514 bug fix
+cad2021 feature commit 2
+2200b30 feature commit 1
+be260a5 version3
+95c0d47 version2
+c7d1099 version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$ git log --oneline
+0d201d1 (HEAD -> master) Revert " 1"
+aa878d7  1
+a6b2856 name after reword commiting
+9803969 Revert " 3"
+a4f7223  3
+a0698eb Revert "revert commit 2"
+06e4f73 revert commit 2
+6b16678 Revert "revert commit"
+dda4440 revert commit
+6a81c42 Commit resolved
+12049dc conflict
+449f51f (conflict) conflict3
+632c41a Completed
+44c26a6 (feature1) feature done
+891e514 bug fix
+cad2021 feature commit 2
+2200b30 feature commit 1
+be260a5 version3
+95c0d47 version2
+c7d1099 version1
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/Branch (master)
+$

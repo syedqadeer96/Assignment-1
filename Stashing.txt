@@ -1,0 +1,56 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi f1.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ vi f2.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    abc.txt
+        deleted:    file
+        deleted:    greeting.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1.txt
+        f2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git rm abc.txt
+rm 'abc.txt'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git rm file
+rm 'file'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git rm greeting.txt
+rm 'greeting.txt'
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    abc.txt
+        deleted:    file
+        deleted:    greeting.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1.txt
+        f2.txt
+
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git stash
+Saved working directory and index state WIP on master: c86fa19 squashingfile.txt
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$

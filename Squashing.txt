@@ -1,0 +1,24 @@
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log --oneline
+dfc45c7 (HEAD -> master) squash1.txt
+5c5dac8 greeting.txt
+9fe2518 Master Commit
+8f2362f (greetings, FEATURE) Greet
+3e1c927 file 3 commit
+ceb1d41 Secon c
+0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$ git log --oneline
+b5b06e3 (HEAD -> master) Master Commit
+8f2362f (greetings, FEATURE) Greet
+3e1c927 file 3 commit
+ceb1d41 Secon c
+0fb1cdd First commit
+
+HP@DESKTOP-IU19D9D MINGW64 ~/OneDrive/Desktop/19 katas (master)
+$
